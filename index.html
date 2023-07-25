@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Countdown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="Square1"></div>
+        <div class="Square2"></div>
+        <h2>Countdown Timer</h2>
+        <div class="Time-box">
+            <div class="countdown-value">00:00</div>
+        </div>
+        <div class="btn-box">
+            <button class="timer" onclick="Countdown(10)">10</button>
+            <button class="timer" onclick="Countdown(30)">30m</button>
+            <button class="timer" onclick="Countdown(60)">60m</button>
+        </div>
+        <button class="submitbtn" onclick="Reset()">Reset</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

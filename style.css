@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222;
+}
+
+.container{
+    height: 270px;
+    width: 450px;
+    background: #333;
+    border: 1px solid #111;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.container .Square1{
+    height: 270px;
+    width: 25px;
+    position: absolute;
+    right: -20px;
+    background: #00ff00;
+    filter: blur(2px);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    z-index: -1;
+}
+
+.container .Square2{
+    height: 270px;
+    width: 25px;
+    position: absolute;
+    left: -20px;
+    background: #f00;
+    filter: blur(2px);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    z-index: -1;
+}
+
+.container h2{
+    font-size: 40px;
+    color: #666;
+}
+
+.container .Time-box{
+    font-size: 50px;
+    margin-top: 10px;
+    border: 3px solid #222;
+    height: 50px;
+    width: 250px;
+    border-radius: 5px;
+    background: #222;
+    color:#00ff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.btn-box .timer{
+    margin-top: 15px;
+    margin-left: 10px;
+    height: 40px;
+    width: 70px;
+    font-weight: 600;
+    border-radius: 5px;
+    outline: none;
+    background: #222;
+    color: #666;
+    font-size: 25px;
+    cursor: pointer;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+}
+
+.timer.active{
+    color: #00ff00;
+    border: 2px solid #00ff00;
+}
+
+.container .submitbtn{
+    width: 200px;
+    margin-top: 20px;
+    height: 40px;
+    background: #f00;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    visibility: hidden;
+}
+
+.submitbtn.active{
+    visibility: visible;
+}
+
+.countdown-value.active{
+    animation: Rest .6s linear infinite;
+    font-size: 40px;
+}
+
+@keyframes Rest {
+    0%{
+        opacity: 0.9;
+        scale: .9;
+    }
+    50%{
+        opacity: 1;
+        scale: 1;
+    }
+    100%{
+        opacity: 0.9;
+        scale: .9;
+    }
+}
